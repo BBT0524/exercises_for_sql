@@ -1,3 +1,3 @@
 # README
-- 使用软件Typora打开
-- 支持Latex编辑
+- 除了github在线阅读外，还可以通过软件Typora
+- Latex语法
