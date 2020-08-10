@@ -34,19 +34,31 @@ limit 2, 1   -- 从第2条记录，向后读取1个
 
 
 
-## 方法3：使用没有limit的比较子查询  
+## 方法3：使用没有limit的方法：自连接+group by 
 
 因为所有的数据里员工入职的日期都不是同一天， 所以倒数第三晚是单个值，满足比较子查询的返回值是单个的要求。
+第k个项的确定方法：自连接+group by 。其相关具体说明参考sql18.md
 
 ```sql
 select * 
 from employees
 where  hire_date= ( select min(a.hire_date) 
                     from employees a, employees b
-                    where a.emp_no!=b.emp_no and a.hire_date < b.hire_date
+                    where a.hire_date <= b.hire_date
                     group by a.emp_no
-                    having count(*)<3 )
+                    having count(*) = 3 )
+```
 
+或者
+```sql
+select * 
+from employees
+where  hire_date= ( select min(a.hire_date) 
+                    from employees a
+                    join employees b
+                    on a.hire_date <= b.hire_date   
+                    group by a.emp_no
+                    having count(*) = 3 )
 ```
 
 
