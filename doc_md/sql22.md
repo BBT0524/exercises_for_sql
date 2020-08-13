@@ -1,4 +1,4 @@
-# [sql21](https://www.nowcoder.com/practice/6a62b6c0a7324350a6d9959fa7c21db3?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
+# [sql22](https://www.nowcoder.com/practice/6a62b6c0a7324350a6d9959fa7c21db3?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 
 ## 1. 题目描述
 
