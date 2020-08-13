@@ -43,3 +43,6 @@ and s1.to_date = '9999-01-01'
 and s2.to_date = '9999-01-01'
 and s1.salary > s2.salary
 ```
+理解：
+- 对salaries表连接到不同的表de, dm上，使得被连接的表具有了salary的信息，实现了信息扩充。将信息扩充后的表暂且命名为(de, s1) 和 (dm, s2)
+- 对扩充信息后的表按照(de, s1) .salary >   (dm, s2).salary方式进行自连接。于是就得到了题目所求内容：获取员工其当前的薪水比其manager当前薪水还高的相关信息
