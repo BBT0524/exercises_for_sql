@@ -1,4 +1,4 @@
-# [sql25]()
+# [sql25](https://www.nowcoder.com/practice/f858d74a030e48da8e0f69e21be63bef?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 
 ## 1. 题目描述
 
